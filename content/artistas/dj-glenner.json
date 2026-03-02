@@ -1,0 +1,19 @@
+{
+  "id": "dj-glenner",
+  "nome": "DJ GLENNER",
+  "categoria": "dj",
+  "bio": "DJ Glenner é responsável por grandes produções da Love Funk.",
+  "fotoCard": "/assets/glenner.jpg",
+  "fotoPerfil": "/assets/glenner.jpg",
+  "seguidores": "2M+",
+  "views": "500M",
+  "social": {
+    "ig": "#",
+    "tk": "#",
+    "yt": "#",
+    "sp": "#"
+  },
+  "hits": [
+    { "id": "ID_HIT_1", "titulo": "Beat Mágico", "artista": "DJ Glenner" }
+  ]
+}

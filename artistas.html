@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artistas - Love Funk</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="page-artistas">
+
+  <nav class="navbar nav-active" id="mainNav">
+    <div class="nav-content">
+      <button class="menu-toggle" aria-label="Abrir menu" type="button" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <a class="nav-logo-mobile" href="index.html" aria-label="Ir para Home">
+        <img src="assets/love.png" alt="Love Funk" />
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" onclick="closeMenu()">INÍCIO</a></li>
+        <li><a href="artistas.html" onclick="closeMenu()">ARTISTAS</a></li>
+
+        <li class="nav-logo-item">
+          <img src="assets/love.png" alt="Logo Love Funk" class="mini-logo" />
+        </li>
+
+        <li><a href="index.html#noticias" onclick="closeMenu()">NOTÍCIAS</a></li>
+        <li><a href="index.html#grupo" onclick="closeMenu()">LOVE FUNK</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="casting-header">
+    <div class="casting-bg-text">ARTISTAS</div>
+
+    <div class="container casting-content">
+      <h1 class="casting-title">NOSSO <span class="text-highlight">ELENCO</span></h1>
+      <p>Conheça os artistas exclusivos da Love Funk.</p>
+
+      <div class="filter-group">
+        <!-- IMPORTANTE: as categorias dos botões precisam bater com o JSON (categoria: "mc", "dj", "trap") -->
+        <button class="filter-btn active" onclick="filterArtists('all', this)">TODOS</button>
+        <button class="filter-btn" onclick="filterArtists('dj', this)">DJ</button>
+        <button class="filter-btn" onclick="filterArtists('mc', this)">MC</button>
+        <button class="filter-btn" onclick="filterArtists('trap', this)">TRAP</button>
+      </div>
+
+      <div class="search-wrapper">
+        <input type="text" id="artistSearch" placeholder="BUSCAR ARTISTA..." onkeyup="searchArtist()">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+  </section>
+
+  <section class="artistas-page-grid">
+    <div class="container">
+
+      <!-- (OPCIONAL) Banner geral “Contrate” no topo da lista (bom pra todos) -->
+      <section class="artistas-contrate" id="artistas-contrate">
+        <div class="contrate-box">
+          <div class="contrate-img">
+            <img id="artistas-contrate-img" src="assets/banner-contrate.jpg" alt="Contrate Love Funk">
+          </div>
+          <div class="contrate-content">
+            <h2 id="artistas-contrate-title">CONTRATE <span>LOVE FUNK</span></h2>
+            <p id="artistas-contrate-text">Leve nossos artistas para seu evento, campanha ou projeto especial.</p>
+            <a id="artistas-contrate-link" href="mailto:contato@lovefunk.com" class="btn-contrate-perfil">
+              SOLICITAR ORÇAMENTO <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- O JS vai preencher automaticamente com base nos JSONs -->
+      <div class="artistas-grid" id="gridArtistas"></div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

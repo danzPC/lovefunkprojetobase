@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - Love Funk</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="page-perfil">
+
+  <!-- NAVBAR -->
+  <nav class="navbar nav-active" id="mainNav">
+    <div class="nav-content">
+      <button class="menu-toggle" aria-label="Abrir menu" type="button" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <a class="nav-logo-mobile" href="index.html" aria-label="Ir para Home">
+        <img src="assets/love.png" alt="Love Funk" />
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" onclick="closeMenu()">INÍCIO</a></li>
+        <li><a href="artistas.html" onclick="closeMenu()">ARTISTAS</a></li>
+
+        <li class="nav-logo-item">
+          <img src="assets/love.png" alt="Logo Love Funk" class="mini-logo" />
+        </li>
+
+        <li><a href="index.html#noticias" onclick="closeMenu()">NOTÍCIAS</a></li>
+        <li><a href="index.html#grupo" onclick="closeMenu()">LOVE FUNK</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO PERFIL -->
+  <section class="profile-hero">
+    <div class="profile-bg-text" id="perfil-bg-text">ARTISTA</div>
+
+    <div class="container profile-hero-inner">
+      <div class="artist-main-img">
+        <!-- IMPORTANTÍSSIMO: não deixe foto fixa de artista aqui (senão “vaza” no erro)
+             O JS vai preencher pelo JSON (fotoPerfil/fotoCard). -->
+        <img id="perfil-foto" src="assets/placeholder-perfil.jpg" alt="Foto do artista" />
+      </div>
+
+      <div class="artist-main-info">
+        <h1 id="perfil-nome">ARTISTA</h1>
+
+        <div class="profile-metrics">
+          <div class="metric">
+            <span class="metric-label">SEGUIDORES</span>
+            <span class="metric-value" id="perfil-seguidores">—</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">VIEWS</span>
+            <span class="metric-value" id="perfil-views">—</span>
+          </div>
+        </div>
+
+        <div class="profile-social" id="perfil-social">
+          <!-- preenchido via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PERFIL -->
+  <section class="profile-content">
+    <div class="container profile-grid">
+
+      <!-- BIO -->
+      <div class="artist-bio">
+        <h2>Biografia</h2>
+        <p id="perfil-bio">—</p>
+      </div>
+
+      <!-- ÁREA DIREITA -->
+      <div class="artist-hits">
+
+        <!-- HIT DO MOMENTO (puxado do JSON: featured) -->
+        <div class="featured-hit">
+          <div class="featured-top">
+            <h2>Hit do Momento</h2>
+            <span class="featured-badge">DESTAQUE</span>
+          </div>
+
+          <!-- NADA FIXO AQUI: o JS coloca onclick e dados do hit -->
+          <button class="featured-card" id="perfil-featured-btn" type="button">
+            <div class="featured-thumb">
+              <img id="perfil-hit-thumb" src="assets/placeholder-thumb.jpg" alt="Hit do momento" />
+              <div class="featured-play"><i class="fas fa-play"></i></div>
+            </div>
+
+            <div class="featured-info">
+              <h3 id="perfil-hit-title">—</h3>
+              <p id="perfil-hit-artist">—</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- LISTA DE HITS -->
+        <h2 class="hits-title">Principais Hits</h2>
+
+        <div class="hits-list" id="perfil-hits">
+          <!-- preenchido via JS -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO CONTRATE (GERAL - mesma para todos os artistas) -->
+  <section class="perfil-contrate" id="perfil-contrate">
+    <div class="container">
+      <div class="contrate-box">
+
+        <div class="contrate-img">
+          <!-- imagem geral (você troca no painel depois) -->
+          <img id="contrate-img" src="assets/banner-contrate.jpg" alt="Contrate Love Funk">
+        </div>
+
+        <div class="contrate-content">
+          <!-- textos gerais (você troca no painel depois) -->
+          <h2 id="contrate-title">CONTRATE <span>LOVE FUNK</span></h2>
+          <p id="contrate-text">Shows, eventos, publis ou projetos especiais com nossos artistas.</p>
+
+          <a id="contrate-link" href="mailto:contato@lovefunk.com" class="btn-contrate-perfil">
+            SOLICITAR ORÇAMENTO <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTATO (MESMO DA HOME) -->
+  <footer class="footer-section" id="contato">
+    <div class="contact-bg-text">CONTATO</div>
+
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="contact-subtitle">ENTRE EM CONTATO</span>
+          <h2 class="contact-title">VAMOS<br />CRIAR<br />JUNTOS?</h2>
+          <p class="contact-description">
+            Entre em contato com a gente e vamos fazer o seu projeto acontecer. Shows, publicidades ou criar algo novo.
+          </p>
+          <a href="mailto:contato@lovefunk.com" class="btn-contact">
+            ENTRAR EM CONTATO <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="contact-right">
+          <div class="footer-nav-group">
+            <h4>NAVEGAÇÃO</h4>
+            <ul>
+              <li><a href="index.html#inicio">Home</a></li>
+              <li><a href="index.html#grupo">O Grupo</a></li>
+              <li><a href="index.html#noticias">Novidades</a></li>
+              <li><a href="index.html#parcerias">Parcerias</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-group">
+            <h4>REDES SOCIAIS</h4>
+            <ul class="social-links-list">
+              <li><a href="#" id="footer-ig">Instagram <i class="fas fa-arrow-right"></i></a></li>
+              <li><a href="#" id="footer-yt">YouTube <i class="fas fa-arrow-right"></i></a></li>
+              <li><a href="#" id="footer-tk">TikTok <i class="fas fa-arrow-right"></i></a></li>
+              <li><a href="#" id="footer-sp">Spotify <i class="fas fa-arrow-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-center-info">
+        <div class="info-block">
+          <h4>ENDEREÇO</h4>
+          <p id="footer-endereco">Av. Conceição, 1923 - Vila Paiva - São Paulo - SP - 02072-002</p>
+        </div>
+        <div class="info-block">
+          <h4>EMAIL</h4>
+          <p id="footer-email">contato@lovefunk.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="container bottom-bar-content">
+        <img src="assets/love.png" alt="Love Funk" class="footer-logo" />
+        <p class="copyright">© 2026 LOVE FUNK. TODOS OS DIREITOS RESERVADOS.</p>
+        <div class="footer-legal-links">
+          <a href="#">TERMOS</a>
+          <a href="#">PRIVACIDADE</a>
+        </div>
+        <p class="developer-credit">DESENVOLVIDO POR <span id="footer-dev">SEU NOME</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL PLAYER (reutiliza do home) -->
+  <div id="video-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-label="Player de vídeo">
+      <div class="modal-header">
+        <div class="playing-info">
+          <span class="now-playing">AGORA REPRODUZINDO</span>
+          <h2 id="modal-video-title">NOME DA MÚSICA</h2>
+          <p id="modal-video-artist">ARTISTAS</p>
+        </div>
+        <button class="close-modal" type="button" onclick="closePlayer()" aria-label="Fechar player">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe id="main-player" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMPORTANTE: use apenas o script.js -->
+  <script src="script.js"></script>
+</body>
+</html>

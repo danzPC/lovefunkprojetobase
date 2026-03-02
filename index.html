@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Funk - Oficial</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="page-home">
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="loader-content">
+      <img src="assets/love.png" alt="Love Funk Logo" class="loader-logo" />
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="mainNav"> 
+    <div class="nav-content">
+      <!-- Botão Mobile -->
+      <button class="menu-toggle" aria-label="Abrir menu" type="button" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Logo Mobile -->
+      <a class="nav-logo-mobile" href="index.html" aria-label="Ir para Home">
+        <img src="assets/love.png" alt="Love Funk" />
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" onclick="closeMenu()">INÍCIO</a></li>
+        <li><a href="artistas.html" onclick="closeMenu()">ARTISTAS</a></li>
+
+        <li class="nav-logo-item">
+          <img src="assets/love.png" alt="Logo Love Funk" class="mini-logo" />
+        </li>
+
+        <li><a href="#noticias" onclick="closeMenu()">NOTÍCIAS</a></li>
+        <li><a href="#grupo" onclick="closeMenu()">LOVE FUNK</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <div class="video-background">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="assets/paiva.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="main-brand-text swoosh-effect">
+        LOVE F<span class="gradient-unk">UNK</span>
+      </h1>
+      <h2 class="static-title">A MAIOR PRODUTORA DO BRASIL</h2>
+      <div class="changing-text-wrapper">
+        <h3 id="changing-text" class="swoosh-text swoosh-effect">CONTRATE NOSSOS ARTISTAS</h3>
+      </div>
+    </div>
+
+    <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+  </header>
+
+  <!-- LANÇAMENTOS -->
+  <section class="lancamentos-section" id="lancamentos">
+    <div class="container">
+      <div class="section-header">
+        <div class="title-area">
+          <span class="badge">EM ALTA</span>
+          <h2 class="section-title">ÚLTIMOS <span class="text-highlight">LANÇAMENTOS</span></h2>
+        </div>
+
+        <a href="https://www.youtube.com/channel/UC9OMsuaqvGdF0MtK3gYYNkA" class="ver-todos" target="_blank" rel="noopener">
+          VER TODOS <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="lancamentos-grid">
+        <div class="main-highlight"
+          onclick="openPlayer('yS4NfhEzdk4', 'DESCE NO CHÃO', 'MC Paiva, Gabb MC e MC Tato')">
+          <img src="assets/descenochao.jpg" alt="Destaque" class="highlight-thumb" />
+          <div class="play-button-large"><i class="fas fa-play"></i></div>
+
+          <div class="corner-brand">
+            <img src="assets/love.png" alt="Logo" />
+            <span>FILMES</span>
+          </div>
+        </div>
+
+        <div class="releases-list">
+          <div class="release-item" onclick="openPlayer('ID_V1', 'Tropa do Arranca DIu', 'MC Paiva, MC Gabb')">
+            <img src="thumb1.jpg" alt="Thumb" class="release-thumb" />
+            <div class="release-info">
+              <h4>Tropa do Arranca DIu</h4>
+              <p>MC Paiva, MC Gabb</p>
+            </div>
+            <div class="play-button-small"><i class="fas fa-play-circle"></i></div>
+          </div>
+
+          <div class="release-item" onclick="openPlayer('ID_V2', 'Festa do Branco', 'MC Ryan SP, Gaab')">
+            <img src="thumb2.jpg" alt="Thumb" class="release-thumb" />
+            <div class="release-info">
+              <h4>Festa do Branco</h4>
+              <p>MC Ryan SP, Gaab</p>
+            </div>
+            <div class="play-button-small"><i class="fas fa-play-circle"></i></div>
+          </div>
+
+          <div class="release-item" onclick="openPlayer('ID_V3', 'Set Love Funk 4.0', 'DJ GM, MC Paulin da Capital')">
+            <img src="thumb3.jpg" alt="Thumb" class="release-thumb" />
+            <div class="release-info">
+              <h4>Set Love Funk 4.0</h4>
+              <p>DJ GM, MC Paulin da Capital</p>
+            </div>
+            <div class="play-button-small"><i class="fas fa-play-circle"></i></div>
+          </div>
+
+          <div class="release-item" onclick="openPlayer('ID_V4', 'Música de Exemplo 4', 'MCs Diversos')">
+            <img src="thumb4.jpg" alt="Thumb" class="release-thumb" />
+            <div class="release-info">
+              <h4>Música de Exemplo 4</h4>
+              <p>MCs Diversos</p>
+            </div>
+            <div class="play-button-small"><i class="fas fa-play-circle"></i></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SHORTS -->
+  <section class="shorts-section">
+    <div class="container">
+      <div class="shorts-header">
+        <span class="love-bg-text">Love</span>
+        <h2 class="shorts-title-text">Shorts</h2>
+      </div>
+
+      <div class="shorts-grid">
+        <div class="short-card" onclick="openShortPlayer('Payaw8HEzV0')">
+          <img src="short1.jpg" alt="Short 01" />
+          <div class="short-overlay"><i class="fas fa-play"></i><p>12 molas ou 4 molas?</p></div>
+        </div>
+
+        <div class="short-card" onclick="openShortPlayer('WU-B6DDwtgM')">
+          <img src="short2.jpg" alt="Short 02" />
+          <div class="short-overlay"><i class="fas fa-play"></i><p>Djonga deu o papo</p></div>
+        </div>
+
+        <div class="short-card" onclick="openShortPlayer('ID_S3')">
+          <img src="short3.jpg" alt="Short 03" />
+          <div class="short-overlay"><i class="fas fa-play"></i><p>Funks Favoritos</p></div>
+        </div>
+
+        <div class="short-card" onclick="openShortPlayer('ID_S4')">
+          <img src="short4.jpg" alt="Short 04" />
+          <div class="short-overlay"><i class="fas fa-play"></i><p>Na Quebrada</p></div>
+        </div>
+      </div>
+
+      <div class="shorts-footer">
+        <a href="#contrate" class="contrate-banner">
+          <img src="banner-contrate.jpg" alt="Contrate" />
+        </a>
+
+        <div class="social-side">
+          <p>Siga nossas<br><strong>Redes Sociais</strong></p>
+          <div class="social-icons-footer">
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <p class="hashtag">Use a hashtag: <span>#portallovefunk</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section class="quick-links-section">
+    <div class="container">
+      <div class="quick-links-grid">
+        <a href="#link1" class="quick-link-item">
+          <div class="circle-wrapper">
+            <img src="https://via.placeholder.com/150/000000/FF0000?text=LINK+1" alt="Link 1" />
+          </div>
+          <span>AGENDA</span>
+        </a>
+
+        <a href="#link2" class="quick-link-item">
+          <div class="circle-wrapper">
+            <img src="https://via.placeholder.com/150/000000/FF0000?text=LINK+2" alt="Link 2" />
+          </div>
+          <span>LOJA</span>
+        </a>
+
+        <a href="#link3" class="quick-link-item">
+          <div class="circle-wrapper">
+            <img src="https://via.placeholder.com/150/000000/FF0000?text=LINK+3" alt="Link 3" />
+          </div>
+          <span>CONTATO</span>
+        </a>
+
+        <a href="#link4" class="quick-link-item">
+          <div class="circle-wrapper">
+            <img src="https://via.placeholder.com/150/000000/FF0000?text=LINK+4" alt="Link 4" />
+          </div>
+          <span>SOBRE</span>
+        </a>
+
+        <a href="#link5" class="quick-link-item">
+          <div class="circle-wrapper">
+            <img src="https://via.placeholder.com/150/000000/FF0000?text=LINK+5" alt="Link 5" />
+          </div>
+          <span>PARCEIROS</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="news-section" id="noticias">
+    <div class="container">
+      <div class="news-header">
+        <span class="badge">PORTAL LOVE FUNK</span>
+        <h2 class="news-title">Últimas <span class="text-highlight">Novidades</span></h2>
+        <p class="news-subtitle">Fique por dentro de tudo que acontece no universo Love Funk</p>
+      </div>
+
+      <div class="news-grid">
+        <a href="#noticia1" class="news-main">
+          <img src="assets/noticia-main.jpg" alt="Parceria Love Funk e KondZilla" />
+          <div class="news-overlay">
+            <span class="news-category">MÚSICA</span>
+            <h3>Parceria histórica entre Love Funk e KondZilla impulsiona o funk nacional</h3>
+          </div>
+        </a>
+
+        <div class="news-side">
+          <a href="#noticia2" class="news-item">
+            <img src="assets/noticia-side1.jpg" alt="Expansão Love Funk" />
+            <div class="news-overlay">
+              <span class="news-category">MÚSICA</span>
+              <h3>Love Funk A MAIOR DO PLANETA: Empresa Anuncia Expansão...</h3>
+            </div>
+          </a>
+
+          <a href="#noticia3" class="news-item">
+            <img src="assets/noticia-side2.jpg" alt="Eventos de Funk" />
+            <div class="news-overlay">
+              <span class="news-category">EVENTOS</span>
+              <h3>Produtores de Eventos de Funk Faturam Milhares de Reais em...</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="news-footer">
+        <a href="#todas-noticias" class="btn-ver-todas">Ver todas as notícias <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about-section" id="grupo">
+    <div class="container about-grid">
+      <div class="about-content">
+        <span class="about-label">SOBRE A EMPRESA</span>
+        <h2 class="about-title">O GRUPO <br /><span>LOVE FUNK</span></h2>
+        <p class="about-description">
+          Uma produtora musical e de entretenimento que revolucionou a cena do funk brasileiro.
+          O Grupo Love Funk é referência em promover e gerenciar artistas, produzir conteúdo
+          audiovisual de alta qualidade e contribuir significativamente para a disseminação
+          da cultura urbana brasileira no cenário mundial.
+        </p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3 class="counter" data-target="2">0</h3>
+          <span class="stat-suffix">M+</span>
+          <p>SEGUIDORES</p>
+        </div>
+
+        <div class="stat-item">
+          <h3 class="counter" data-target="100">0</h3>
+          <span class="stat-suffix">+</span>
+          <p>ARTISTAS</p>
+        </div>
+
+        <div class="stat-item">
+          <h3 class="counter" data-target="15">0</h3>
+          <span class="stat-suffix">B+</span>
+          <p>VIEWS</p>
+        </div>
+
+        <div class="stat-item">
+          <h3 class="counter" data-target="2009">0</h3>
+          <p>FUNDAÇÃO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / CONTATO -->
+  <footer class="footer-section" id="contato">
+    <div class="contact-bg-text">CONTATO</div>
+
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="contact-subtitle">ENTRE EM CONTATO</span>
+          <h2 class="contact-title">VAMOS<br />CRIAR<br />JUNTOS?</h2>
+          <p class="contact-description">
+            Entre em contato com a gente e vamos fazer o seu projeto acontecer. Shows, publicidades ou criar algo novo.
+          </p>
+          <a href="mailto:contato@lovefunk.com" class="btn-contact">
+            ENTRAR EM CONTATO <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="contact-right">
+          <div class="footer-nav-group">
+            <h4>NAVEGAÇÃO</h4>
+            <ul>
+              <li><a href="#inicio">Home</a></li>
+              <li><a href="#grupo">O Grupo</a></li>
+              <li><a href="#noticias">Novidades</a></li>
+              <li><a href="#parcerias">Parcerias</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav-group">
+            <h4>REDES SOCIAIS</h4>
+            <ul class="social-links-list">
+              <li><a href="#">Instagram <i class="fas fa-arrow-right"></i></a></li>
+              <li><a href="#">YouTube <i class="fas fa-arrow-right"></i></a></li>
+              <li><a href="#">TikTok <i class="fas fa-arrow-right"></i></a></li>
+              <li><a href="#">Spotify <i class="fas fa-arrow-right"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-center-info">
+        <div class="info-block">
+          <h4>ENDEREÇO</h4>
+          <p>Av. Conceição, 1923 - Vila Paiva - São Paulo - SP - 02072-002</p>
+        </div>
+        <div class="info-block">
+          <h4>EMAIL</h4>
+          <p>contato@lovefunk.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <div class="container bottom-bar-content">
+        <img src="assets/love.png" alt="Love Funk" class="footer-logo" />
+        <p class="copyright">© 2026 LOVE FUNK. TODOS OS DIREITOS RESERVADOS.</p>
+        <div class="footer-legal-links">
+          <a href="#">TERMOS</a>
+          <a href="#">PRIVACIDADE</a>
+        </div>
+        <p class="developer-credit">DESENVOLVIDO POR <span>SEU NOME</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL PLAYER -->
+  <div id="video-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-container" role="dialog" aria-modal="true" aria-label="Player de vídeo">
+      <div class="modal-header">
+        <div class="playing-info">
+          <span class="now-playing">AGORA REPRODUZINDO</span>
+          <h2 id="modal-video-title">NOME DA MÚSICA</h2>
+          <p id="modal-video-artist">ARTISTAS</p>
+        </div>
+        <button class="close-modal" type="button" onclick="closePlayer()" aria-label="Fechar player">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe id="main-player" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SHORTS -->
+  <div id="short-modal" class="modal-overlay" aria-hidden="true">
+    <div class="short-player-container" role="dialog" aria-modal="true" aria-label="Player de shorts">
+      <button class="nav-arrow left" type="button" onclick="navigateShort(-1)" aria-label="Short anterior">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="vertical-video-wrapper">
+        <iframe id="short-iframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <button class="close-short" type="button" onclick="closeShortPlayer()" aria-label="Fechar shorts">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <button class="nav-arrow right" type="button" onclick="navigateShort(1)" aria-label="Próximo short">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "id": "mc-paiva",
+  "nome": "MC PAIVA",
+  "categoria": "mc",
+
+  "bio": "MC Paiva é um dos principais nomes do funk paulista atual, acumulando milhões de views e grandes hits no cenário nacional.",
+
+  "seguidores": "5M+",
+  "views": "800M",
+
+  "fotoCard": "assets/paiva.jpg",
+  "fotoPerfil": "assets/paiva.jpg",
+
+  "social": {
+    "ig": "https://instagram.com/",
+    "tk": "https://tiktok.com/",
+    "yt": "https://youtube.com/",
+    "sp": "https://spotify.com/"
+  },
+
+  "featured": {
+    "id": "yS4NfhEzdk4",
+    "titulo": "Desce no Chão",
+    "artista": "MC Paiva, Gabb MC e MC Tato",
+    "thumb": "assets/descenochao.jpg"
+  },
+
+  "hits": [
+    {
+      "id": "yS4NfhEzdk4",
+      "titulo": "Desce no Chão",
+      "artista": "MC Paiva"
+    },
+    {
+      "id": "VIDEO_ID_2",
+      "titulo": "Tropa do Arranca Diu",
+      "artista": "MC Paiva"
+    },
+    {
+      "id": "VIDEO_ID_3",
+      "titulo": "Outro Hit",
+      "artista": "MC Paiva"
+    }
+  ]
+}
